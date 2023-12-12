@@ -5,6 +5,7 @@ import { Home } from './_root/pages';
 import './globals.css';
 import { AuthLayout } from './_auth/AuthLayout';
 import RootLayout from './_root/RootLayout';
+import { Toaster } from "@/components/ui/toaster"
 
 
 export const App = () => {
@@ -23,6 +24,7 @@ export const App = () => {
             </Route>
 
         </Routes>
+        <Toaster />
     </main>
   )
 }
