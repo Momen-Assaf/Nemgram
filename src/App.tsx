@@ -1,4 +1,4 @@
-import { Routes,Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { SigninForm } from './_auth/forms/SigninForm';
 import { SingupForm } from './_auth/forms/SingupForm';
 import { Home } from './_root/pages';
@@ -11,20 +11,20 @@ import { Toaster } from "@/components/ui/toaster"
 export const App = () => {
   return (
     <main className='flex h-screen'>
-        <Routes>
-            {/* {Public Route} */}
-            <Route element={<AuthLayout/>}>
-                <Route path='/sign-in' element = {<SigninForm />}/>
-                <Route path='/sign-up' element = {<SingupForm />}/>
-            </Route>
+      <Routes>
+        {/* {Public Route} */}
+        <Route element={<AuthLayout />}>
+          <Route path='/sign-up' element={<SingupForm />} />
+          <Route path='/sign-in' element={<SigninForm />} />
+        </Route>
 
-            {/* {Private Route} */}
-            <Route element={<RootLayout/>}>
-                <Route index element={<Home />}/>
-            </Route>
+        {/* {Private Route} */}
+        <Route element={<RootLayout />}>
+          <Route index element={<Home />} />
+        </Route>
 
-        </Routes>
-        <Toaster />
+      </Routes>
+      <Toaster />
     </main>
   )
 }
