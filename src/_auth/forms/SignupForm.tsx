@@ -13,7 +13,7 @@ import { useUserContext } from "@/context/AuthContext"
 
 
 
-export const SingupForm = () => {
+export const SignupForm = () => {
   const { toast } = useToast()
   const { checkAuthUser, isLoading: isUserLoading} = useUserContext();
   const navigate = useNavigate();
